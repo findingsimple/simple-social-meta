@@ -14,7 +14,7 @@ Stable tag: 1.0
 
 ## Description
 
-Simple plugin that helps integrate facebook opengraph meta and scripts into you WordPress powered site.
+Simple plugin that helps integrate facebook open graph meta into you WordPress powered site.
 
 ## Installation
 
