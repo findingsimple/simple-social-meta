@@ -216,7 +216,7 @@ class SIMPLE_FACEBOOK_Admin {
 	 * Saves the post AGLS meta box settings as post metadata.
 	 *
 	 */
-	public static function save_agls_meta_box( $post_id, $post ) {
+	public static function save_simple_facebook_meta_box( $post_id, $post ) {
 
 		/* Verify the nonce before proceeding. */
 		if ( !isset( $_POST['simple-facebook-meta-box-nonce'] ) || !wp_verify_nonce( $_POST['simple-facebook-meta-box-nonce'], basename( __FILE__ ) ) )
