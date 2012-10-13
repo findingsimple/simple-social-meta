@@ -762,6 +762,7 @@ if ( ! class_exists( 'SIMPLE_FACEBOOK' ) ) {
 				$url = get_post_type_archive_link( get_query_var('post_type') );
 			} else if(is_home()) {
 				$url = get_bloginfo('url');
+				$url = preg_replace("~^https?://[^/]+$~", "$0/", $url); //trailing slash
 			} else if( is_admin() ) {
 				$url = get_permalink( $post->ID ); //displays the default value in the admin area
 			}
