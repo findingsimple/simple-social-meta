@@ -1065,7 +1065,7 @@ if ( ! class_exists( 'SIMPLE_SOCIAL_META' ) ) {
 				$url = get_permalink();
 			} else if(is_search()) {
 				$search = get_query_var('s');
-				$url = get_bloginfo('url') . "/search/". $search;
+				$url = get_search_link( $search );
 			} else if(is_category()) {
 				$url =  get_category_link( get_queried_object() );
 			} else if(is_tag()) {
