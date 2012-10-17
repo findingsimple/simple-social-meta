@@ -261,7 +261,7 @@ class SIMPLE_SOCIAL_META_Admin {
 		<p>
 			<label for="ssm-title"><?php _e( 'Title:', SIMPLE_SOCIAL_META::$text_domain ); ?></label>
 			<br />
-			<input type="text" name="ssm-title" id="ssm-title" value="<?php echo esc_attr( get_post_meta( $object->ID, 'ssm-title', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
+			<input type="text" name="ssm-title" id="ssm-title" value="<?php echo esc_attr( get_post_meta( $object->ID, '_ssm-title', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
 			<br />
 			<span style="color:#aaa;">Default: <?php $default = SIMPLE_SOCIAL_META::ssm_title( $args ); echo $default['content']; ?></span>
 		</p>
@@ -269,7 +269,7 @@ class SIMPLE_SOCIAL_META_Admin {
 		<p>
 			<label for="ssm-site-name"><?php _e( 'Site Name:', SIMPLE_SOCIAL_META::$text_domain ); ?></label>
 			<br />
-			<input type="text" name="ssm-site-name" id="ssm-site-name" value="<?php echo esc_attr( get_post_meta( $object->ID, 'ssm-site-name', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
+			<input type="text" name="ssm-site-name" id="ssm-site-name" value="<?php echo esc_attr( get_post_meta( $object->ID, '_ssm-site-name', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
 			<br />
 			<span style="color:#aaa;">Default: <?php $default = SIMPLE_SOCIAL_META::ssm_site_name( $args ); echo $default['content']; ?></span>
 		</p>
@@ -277,7 +277,7 @@ class SIMPLE_SOCIAL_META_Admin {
 		<p>
 			<label for="ssm-description"><?php _e( 'Description:', SIMPLE_SOCIAL_META::$text_domain ); ?></label>
 			<br />
-			<textarea name="ssm-description" id="ssm-description" cols="60" rows="2" tabindex="30" style="width: 99%;"><?php echo esc_textarea( get_post_meta( $object->ID, 'ssm-description', true ) ); ?></textarea>
+			<textarea name="ssm-description" id="ssm-description" cols="60" rows="2" tabindex="30" style="width: 99%;"><?php echo esc_textarea( get_post_meta( $object->ID, '_ssm-description', true ) ); ?></textarea>
 			<br />
 			<span style="color:#aaa;">Default: <?php $default = SIMPLE_SOCIAL_META::ssm_description( $args ); echo $default['content']; ?></span>
 		</p>
@@ -285,7 +285,7 @@ class SIMPLE_SOCIAL_META_Admin {
 		<p>
 			<label for="ssm-url"><?php _e( 'URL:', SIMPLE_SOCIAL_META::$text_domain ); ?></label>
 			<br />
-			<input type="text" name="ssm-url" id="ssm-url" value="<?php echo esc_attr( get_post_meta( $object->ID, 'ssm-url', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
+			<input type="text" name="ssm-url" id="ssm-url" value="<?php echo esc_attr( get_post_meta( $object->ID, '_ssm-url', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
 			<br />
 			<span style="color:#aaa;">Default: <?php $default = SIMPLE_SOCIAL_META::ssm_url( $args ); echo $default['content']; ?></span>
 		</p>
@@ -293,7 +293,7 @@ class SIMPLE_SOCIAL_META_Admin {
 		<p>
 			<label for="ssm-image"><?php _e( 'Image:', SIMPLE_SOCIAL_META::$text_domain ); ?></label>
 			<br />
-			<input type="text" name="ssm-image" id="ssm-image" value="<?php echo esc_attr( get_post_meta( $object->ID, 'ssm-image', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
+			<input type="text" name="ssm-image" id="ssm-image" value="<?php echo esc_attr( get_post_meta( $object->ID, '_ssm-image', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
 			<br />
 			<span style="color:#aaa;">Default: <?php $default = SIMPLE_SOCIAL_META::ssm_image( $args ); echo $default['content']; ?></span>
 		</p>
@@ -301,7 +301,7 @@ class SIMPLE_SOCIAL_META_Admin {
 		<p>
 			<label for="ssm-type"><?php _e( 'Type:', SIMPLE_SOCIAL_META::$text_domain ); ?></label>
 			<br />
-			<input type="text" name="ssm-type" id="ssm-type" value="<?php echo esc_attr( get_post_meta( $object->ID, 'ssm-type', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
+			<input type="text" name="ssm-type" id="ssm-type" value="<?php echo esc_attr( get_post_meta( $object->ID, '_ssm-type', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
 			<br />
 			<span style="color:#aaa;">Default: <?php $default = SIMPLE_SOCIAL_META::ssm_type( $args ); echo $default['content']; ?></span>
 		</p>
@@ -309,7 +309,7 @@ class SIMPLE_SOCIAL_META_Admin {
 		<p>
 			<label for="ssm-locale"><?php _e( 'Locale:', SIMPLE_SOCIAL_META::$text_domain ); ?></label>
 			<br />
-			<input type="text" name="ssm-locale" id="ssm-locale" value="<?php echo esc_attr( get_post_meta( $object->ID, 'ssm-locale', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
+			<input type="text" name="ssm-locale" id="ssm-locale" value="<?php echo esc_attr( get_post_meta( $object->ID, '_ssm-locale', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
 			<br />
 			<span style="color:#aaa;">Default: <?php $default = SIMPLE_SOCIAL_META::ssm_locale( $args ); echo $default['content']; ?></span>
 		</p>
@@ -347,19 +347,19 @@ class SIMPLE_SOCIAL_META_Admin {
 		foreach ( $meta as $meta_key => $new_meta_value ) {
 
 			/* Get the meta value of the custom field key. */
-			$meta_value = get_post_meta( $post_id, $meta_key, true );
+			$meta_value = get_post_meta( $post_id, '_' . $meta_key , true );
+
+			/* If there is no new meta value but an old value exists, delete it. */
+			if ( '' == $new_meta_value && $meta_value )
+				delete_post_meta( $post_id, '_' . $meta_key , $meta_value );
 
 			/* If a new meta value was added and there was no previous value, add it. */
-			if ( $new_meta_value && '' == $meta_value )
-				add_post_meta( $post_id, $meta_key, $new_meta_value, true );
+			elseif ( $new_meta_value && '' == $meta_value )
+				add_post_meta( $post_id, '_' . $meta_key , $new_meta_value, true );
 
 			/* If the new meta value does not match the old value, update it. */
 			elseif ( $new_meta_value && $new_meta_value != $meta_value )
-				update_post_meta( $post_id, $meta_key, $new_meta_value );
-
-			/* If there is no new meta value but an old value exists, delete it. */
-			elseif ( '' == $new_meta_value && $meta_value )
-				delete_post_meta( $post_id, $meta_key, $meta_value );
+				update_post_meta( $post_id, '_' . $meta_key , $new_meta_value );
 		}
 	}
 
