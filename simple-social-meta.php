@@ -409,7 +409,7 @@ if ( ! class_exists( 'SIMPLE_SOCIAL_META' ) ) {
 			if ( !empty($app_id) ) {
 	
 				$attributes = array(
-					'property' => 'og:app_id',
+					'property' => 'fb:app_id',
 					'content' => $app_id
 				);
 			
