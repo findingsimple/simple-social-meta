@@ -35,7 +35,8 @@ class SIMPLE_SOCIAL_META_User_Meta {
 	 */	
 	public static function ssm_contact_methods( $contactmethods ) {
 		
-		$contactmethods['google'] = 'Google+';
+		if ( get_option('simple_social_meta-gp-toggle') != 1 )
+			$contactmethods['google'] = 'Google+';
 		
 		$contactmethods['twitter'] = __( 'Twitter username (without @)', SIMPLE_SOCIAL_META::$text_domain );
 

@@ -126,6 +126,14 @@ class SIMPLE_SOCIAL_META_Admin {
 			$page,
 			'simple_social_meta-google'
 		);
+
+		add_settings_field(
+			'simple_social_meta-gp-publisher',
+			'Google+ Publisher Profile URL',
+			__CLASS__ . '::simple_social_meta_gp_publisher_callback',
+			$page,
+			'simple_social_meta-google'
+		);
 		
 		//register our settings	
 		register_setting( $page, 'simple_social_meta-default-image' );
@@ -136,7 +144,8 @@ class SIMPLE_SOCIAL_META_Admin {
 		register_setting( $page, 'simple_social_meta-tw-toggle' );
 		register_setting( $page, 'simple_social_meta-tw-site-username' );
 		
-		register_setting( $page, 'simple_social_meta-gp-toggle' );	
+		register_setting( $page, 'simple_social_meta-gp-toggle' );
+		register_setting( $page, 'simple_social_meta-gp-publisher' );		
 
 	}
 
@@ -226,6 +235,12 @@ class SIMPLE_SOCIAL_META_Admin {
 	
 		echo '<input name="simple_social_meta-gp-toggle" id="simple_social_meta-gp-toggle" type="checkbox" value="1" class="code" ' . checked( 1, get_option('simple_social_meta-gp-toggle'), false ) . ' /> Check to DISABLE Google+ Author Meta';
 	
+	}
+	
+	public static function simple_social_meta_gp_publisher_callback() {
+	
+		echo '<input name="simple_social_meta-gp-publisher" type="text" id="simple_social_meta-gp-publisher" class="regular-text" value="'. esc_attr( get_option('simple_social_meta-gp-publisher') ) . '"  />';
+		
 	}
 
 	/**
