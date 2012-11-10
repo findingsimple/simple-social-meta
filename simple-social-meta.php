@@ -793,7 +793,7 @@ if ( ! class_exists( 'SIMPLE_SOCIAL_META' ) ) {
 	
 				$attributes = array(
 					'name' => 'twitter:site',
-					'content' => $site
+					'content' => '@' . $site
 				);
 				
 			}
@@ -829,7 +829,7 @@ if ( ! class_exists( 'SIMPLE_SOCIAL_META' ) ) {
 		
 					$attributes = array(
 						'name' => 'twitter:creator',
-						'content' => $creator
+						'content' => '@' . $creator
 					);
 					
 				}

@@ -105,7 +105,7 @@ class SIMPLE_SOCIAL_META_Admin {
 
 		add_settings_field(
 			'simple_social_meta-tw-site-username',
-			'Twitter Username/Account for the Site',
+			'Twitter Username/Account for the Site (without @)',
 			__CLASS__ . '::simple_social_meta_tw_site_username_callback',
 			$page,
 			'simple_social_meta-twitter'
