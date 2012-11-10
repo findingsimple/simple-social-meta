@@ -78,7 +78,7 @@ if ( ! class_exists( 'SIMPLE_SOCIAL_META' ) ) {
 			
 			/* Add minumum recommended thumbnail size for facebook */
 			if ( function_exists( 'add_image_size' ) )
-				add_image_size( 'Social Thumb', 200, 200 ); 
+				add_image_size( 'Social Thumb', 200, 200, true ); 
 			
 			/* Remove Social Thumb size from list of media sizes */
 			add_filter( 'image_size_names_choose', __CLASS__ .'::remove_image_size_option', 99 );
