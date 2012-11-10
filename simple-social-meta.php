@@ -893,37 +893,33 @@ if ( ! class_exists( 'SIMPLE_SOCIAL_META' ) ) {
 		 * @since 1.0
 		 */		
 		public static function ssm_google_publisher( $args = array() ) {
+						
+			$args = wp_parse_args( $args, self::$defaults );
+			$args = apply_filters( 'ssm_google_publisher_args', $args );
+			extract( $args, EXTR_SKIP );
+	
+			$attributes = array();
 			
-			if ( is_singular() ) {
-			
-				$args = wp_parse_args( $args, self::$defaults );
-				$args = apply_filters( 'ssm_google_publisher_args', $args );
-				extract( $args, EXTR_SKIP );
-		
-				$attributes = array();
-				
-				$publisher =  get_option('simple_social_meta-gp-publisher');
-							
-				if ( !empty($publisher) ) {
-		
-					$attributes = array(
-						'rel' => 'publisher',
-						'href' => $publisher
-					);
-					
-				}
-				
-				//use <link /> tag instead of <meta />
-				$args['element'] = 'link';
-					
-				if ( !$echo && !empty($attributes) )
-					return SIMPLE_SOCIAL_META::ssm_output( $attributes , $args );
-				
-				if ( !empty($attributes) )
-					echo SIMPLE_SOCIAL_META::ssm_output( $attributes , $args );
+			$publisher =  get_option('simple_social_meta-gp-publisher');
+						
+			if ( !empty($publisher) ) {
+	
+				$attributes = array(
+					'rel' => 'publisher',
+					'href' => $publisher
+				);
 				
 			}
 			
+			//use <link /> tag instead of <meta />
+			$args['element'] = 'link';
+				
+			if ( !$echo && !empty($attributes) )
+				return SIMPLE_SOCIAL_META::ssm_output( $attributes , $args );
+			
+			if ( !empty($attributes) )
+				echo SIMPLE_SOCIAL_META::ssm_output( $attributes , $args );
+						
 		}	
 	
 		/**
