@@ -143,7 +143,7 @@ if ( ! class_exists( 'SIMPLE_SOCIAL_META' ) ) {
 		 * @package SIMPLE-SOCIAL-META
 		 * @since 1.0
 		 */	
-		function remove_image_size_option( $sizes ){
+		public static function remove_image_size_option( $sizes ){
 
 			unset( $sizes['Social Thumb'] );
 			
