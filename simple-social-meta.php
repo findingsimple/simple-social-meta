@@ -1173,7 +1173,7 @@ if ( ! class_exists( 'SIMPLE_SOCIAL_META' ) ) {
 		}
 
 		/**
-		 * Add facebook xml namespace
+		 * Add namespace
 		 *
 		 * @author Jason Conroy <jason@findingsimple.com>
 		 * @package SIMPLE-SOCIAL-META
@@ -1181,7 +1181,7 @@ if ( ! class_exists( 'SIMPLE_SOCIAL_META' ) ) {
 		 */			
 		public static function ssm_namespace( $attr ) {
 		
-			$attr .= " xmlns:fb=\"http://ogp.me/ns/fb#\" "; 
+			$attr .= " prefix=\"og: http://ogp.me/ns#\" "; 
 
             return $attr;
 		
